@@ -1,14 +1,16 @@
-from curses.ascii import isalpha
 from utils.hangman_utils import draw_man
 
 answer = "Hello, world!"
 letters_guessed = []
 
+
 def get_strikes():
     return len(list(filter(lambda c: c.isalpha() and c not in answer.lower(), letters_guessed)))
 
+
 def print_answer_progress():
     print(''.join([c if c.lower() in letters_guessed or not c.isalpha() else '_' for c in answer]))
+
 
 while get_strikes() < 6 and any([c.isalpha() and c not in letters_guessed for c in answer.lower()]):
     draw_man(get_strikes())

@@ -26,7 +26,7 @@ while not done:
     print(room_list[current_room][0])
     user_input = input("Which way do you go?  Options: N/E/S/W ")
     '''
-    Evaluates User Input to determine which way to move the player.  
+    Evaluates User Input to determine which way to move the player.
     Uses the array portions from setting up rooms.
     '''
     if user_input.upper() == "N" or user_input.upper() == "NORTH":
